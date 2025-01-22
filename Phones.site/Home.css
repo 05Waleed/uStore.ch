@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's size */
+    font-family: sans-serif;
+    background-color: black;
+}
+
+.nav-bar { 
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+
+header .nav-bar ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+header .nav-bar ul li a {
+    padding: 10px 20px; /* Add padding for spacing */
+    margin-right: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid transparent; /* Default border to prevent shifting */
+    border-radius: 20px; /* Ensure the border-radius matches hover state */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.logo {
+    margin-left: 30px;
+    height: 90px;
+    width: 90px;
+}
+
+.nav-bar ul li a:hover {
+    border-color: white; /* Change border color on hover */
+}
+
+.deals-container {
+  margin-top: 0rem;
+  overflow: hidden; /* Ensures items stay within the container */
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.deals-container ul {
+  display: flex; /* Make the ul a flex container */
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Adjust width to fit all images (6 images in this case) */
+  animation: slide 20s ease-in-out infinite; /* Slow down animation for longer pauses */
+}
+
+.deals-container ul li {
+  list-style: none;
+  flex-shrink: 0; /* Prevent items from shrinking */
+  width: 100%; /* Each item takes full width of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deals-container ul li img {
+  overflow: hidden;
+  height: 70vh; /* Keeps the height consistent */
+  width: auto; /* Ensure the image takes full width of the li container */
+  object-fit: cover; /* Ensures the image fully covers the container without distorting */
+}
+
+/* Keyframes for smooth sliding with long pauses */
+@keyframes slide {
+  0% { transform: translateX(0%); }            /* Show the first image */
+  10% { transform: translateX(0%); }           /* Hold on the first image */
+  15% { transform: translateX(-100%); }        /* Move to the second image */
+  25% { transform: translateX(-100%); }        /* Hold on the second image */
+  30% { transform: translateX(-200%); }        /* Move to the third image */
+  40% { transform: translateX(-200%); }        /* Hold on the third image */
+  45% { transform: translateX(-300%); }        /* Move to the fourth image */
+  55% { transform: translateX(-300%); }        /* Hold on the fourth image */
+  60% { transform: translateX(-400%); }        /* Move to the fifth image */
+  70% { transform: translateX(-400%); }        /* Hold on the fifth image */
+  75% { transform: translateX(-500%); }        /* Move to the sixth image */
+  85% { transform: translateX(-500%); }        /* Hold on the sixth image */
+  90% { transform: translateX(-600%); }        /* Move to the seventh image */
+  100% { transform: translateX(-600%); }       /* Loop back after holding on the last */
+}
+
+  .tab-bar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0; /* Sticks the tab bar to the top of the viewport */
+    z-index: 1000; /* Ensures it stays above other content */
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items to the start for scrolling */
+    background-color: white;
+    list-style: none;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping to the next line */
+    scrollbar-width: none; /* Optional: Thin scrollbar for Firefox */
+    list-style: none;
+  }
+  
+  .tab-bar-buttons {
+    background-color: white;
+    display: inline-block; /* Ensure buttons align horizontally */
+  }
+  
+  .tab-bar-buttons a {
+    background-color: white;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 0 10px; /* Spacing between buttons */
+    padding: 5px 10px; /* Padding inside buttons */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .tab-bar-buttons a:hover {
+    color: #007dbb;
+  }
+  
+  /* Media Query for Small Screens */
+  @media (max-width: 700px) {
+    .tab-bar {
+      overflow-x: auto; /* Enable scrolling for smaller screens */
+    }
+  }
+  
+
+.mobiles-list h1 {
+  background-color: white;
+  font-size: 60px;
+  padding: 50px;
+}
+
+.iphone-list {
+  background-color: white;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  overflow: hidden;
+}
+
+.iphone-model {
+  background-color: white;
+  text-align: center;
+}
+
+.iphone-model img {
+  background-color: white;
+}
+
+.iphone16pro {
+  width: 200px; /* Adjust image size */
+  height: auto;
+}
+
+.iphone16 {
+  width: 350px; /* Adjust image size */
+  height: auto;
+}
+
+.iphone15 {
+  width: 270px; /* Adjust image size */
+  height: auto;
+}
+
+.iphone-model h4 {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+}
+
+.descp {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: white;
+}
+
+.iphone-model h5 {
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  background-color: white;
+}
+
+.info-button {
+  margin-top: 20px;
+  width: auto;
+  padding: 10px 30px;
+  border-radius: 40px;
+  border: 0px;
+  background-color: rgb(0, 157, 255);
+  color: white;
+  font-size: 18px;
+}
+
+.buy-button {
+  padding: 10px 30px;
+  border: 0px;
+  background-color: white;
+  color: rgb(0, 157, 255);
+  font-size: 18px;
+}
+.info-button:hover  {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.buy-button:hover  {
+  transform: scale(1.09);
+  cursor: pointer;
+}
+
+.one-plus-mobiles {
+  background-color: white;
+}
+
+.one-plus-mobiles li {
+  background-color: white;
+}
+
+
+.one-plus-logo {
+  background-color: white;
+  margin-left: 50px;
+  margin-top: 50px;
+  height: auto;
+  width: 220px;
+}
+
+.Rank {
+  margin-left: 3.5rem;
+  background-color: white;
+  color: black;
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.recomended {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.OnePlus-img {
+  background-color: rgb(255, 255, 255);
+  height: auto;
+  width: 470px;
+  margin-top: 0px;
+}
+
+.one-plus-list {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.shadow-div {
+  background-color: white;
+}
+
+.shadow-div h4 {
+  margin-top: -50px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+}
+
+.shadow-div h6 {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.shadow-div h5 {
+  font-size: 17px;
+  font-weight: 700;
+  background-color: white;
+}
+
+.shadow-div .descp {
+    font-size: 17px;
+    font-weight: 300;
+    background-color: white;
+    padding-top: 15px;
+}
+
+.shadow-div .info-button {
+  margin-bottom: 40px;
+}
+
+
+.more-items {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the link within the box */
+  background-color: white;
+  padding: 20px;
+}
+
+.more-items a {
+  text-align: center;
+  width: 95%;
+  padding: 15px;
+  background: linear-gradient(90deg, #005d8a, #44cdff, #005d8a); /* Repeated gradient for smooth looping */
+  background-size: 200% 200%; /* Ensure smooth wave movement */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  animation: gradientWave 5s linear infinite; /* Smooth infinite animation */
+}
+
+.more-items a:hover {
+  box-shadow: 0 5px 15px rgba(0, 172, 237, 0.5); /* Only adds shadow and scaling on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* discover all items button */
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  50% {
+    background-position: 100% 50%; /* Move to the end */
+  }
+  100% {
+    background-position: 0% 50%; /* Loop back to the start */
+  }
+}
+
+footer {
+  background-color: #191919;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-content {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footer-content h4 {
+  background-color: transparent;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-content p {
+  background-color: transparent;
+  line-height: 1.6;
+}
+
+.footer-content ul {
+  background-color: transparent;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  background-color: transparent;
+  margin: 5px 0;
+}
+
+.footer-content ul li a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+  color: #00aced;
+}
+
+.footer-content ul li a img {
+  width: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  background-color: transparent;
+  margin: 0;
+}
+
+.about,
+.links,
+.social-media {
+  background-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-bar {
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Horizontal alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and buttons */
+    padding: 0px; /* Add spacing inside navbar */
+    height: 120px;
+}
+
+.logo {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  height: auto;
+  width: 90px;
+}
+
+.deals-container ul li img {
+  width: 100vw;
+  height: auto;
+}
+
+  header .nav-bar ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .iphone-list, .one-plus-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  button {
+      width: 80%;
+  }
+
+  .about {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 780px) {
+  .nav-bar {
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Horizontal alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and buttons */
+    padding: 0px; /* Add spacing inside navbar */
+    height: 100px;
+}
+
+.logo {
+  margin-left: 10px;
+  padding: 0px;
+  width: 55px; /* Resize logo for smaller screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+  header .nav-bar ul li a {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin-right: 8px;
+  }
+
+  .deals-container {
+    height: auto;
+  }
+
+  .deals-container ul li img {
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .mobiles-list h1 {
+      font-size: 30px;
+  }
+
+  .info-button, .buy-button {
+      padding: 8px 20px;
+  }
+
+  footer .footer-content {
+      flex-direction: column;
+  }
+}
+  

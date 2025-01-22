@@ -1,0 +1,307 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header Section */
+.nav-bar {
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+  flex-wrap: wrap;
+}
+
+header .nav-bar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+header .nav-bar ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+header .nav-bar ul li a {
+  padding: 10px 20px;
+  margin-right: 30px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  margin-left: 30px;
+  height: auto;
+  max-width: 90px;
+}
+
+.nav-bar ul li a:hover {
+  border-color: #ffffff;
+}
+
+.header {
+  background: #111;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid #444;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #00aced;
+}
+
+.header h1 span {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+/* About Us Section */
+.about-us {
+  padding: 1.5rem;
+}
+
+.about-us h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffc107;
+}
+
+/* Why Choose Us Section */
+.tile-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tile {
+  background: #222;
+  padding: 1.5rem;
+  border: 2px solid #444;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.tile h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #00aced;
+}
+
+.tile p {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.tile:hover {
+  background: #333;
+  border-color: #ffc107;
+  transform: scale(1.05);
+}
+
+/* Feedback Section */
+.feedback {
+  padding: 2rem 1rem;
+  background: #000;
+  text-align: center;
+}
+
+.feedback h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffc107;
+}
+
+.feedback-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.feedback-card {
+  background: #111;
+  padding: 1.5rem;
+  border: 2px solid #444;
+  border-radius: 8px;
+  color: #aaa;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.feedback-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.feedback-card span {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #00aced;
+}
+
+.feedback-card:hover {
+  background: #222;
+  border-color: #ffc107;
+}
+
+/* Footer */
+footer {
+  background-color: #191919;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-content h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-content p {
+  line-height: 1.6;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  margin: 5px 0;
+}
+
+.footer-content ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+  color: #00aced;
+}
+
+.footer-content ul li a img {
+  width: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background-color: #1a1a1a;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-bar {
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Horizontal alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and buttons */
+    padding: 0px; /* Add spacing inside navbar */
+    height: 100px;
+}
+
+.logo {
+  margin-left: 10px;
+  padding: 0px;
+  width: 55px; /* Resize logo for smaller screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+  header .nav-bar ul li a {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin-right: 8px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .feedback-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .tile-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+header .nav-bar ul li a {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin-right: 8px;
+  }
+  .nav-bar ul li a {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-us h2,
+  .feedback h2 {
+    font-size: 1.5rem;
+  }
+
+  .tile h3,
+  .feedback-card span {
+    font-size: 1rem;
+  }
+}
